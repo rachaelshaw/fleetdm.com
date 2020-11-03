@@ -1,7 +1,29 @@
 #homepage {
   .hero-banner {
     background: rgb(31,29,66);
-    background: linear-gradient(160deg, rgba(31,29,66,1) 0%, rgba(0,255,240,1) 100%);
+    background: linear-gradient(173deg, rgba(31,29,66,1) 15%, rgba(0,255,240,1) 100%);
     color: #fff;
+  }
+  .hero-bg {
+    min-height: 700px;
+    background-position: center bottom; 
+    background-size: 1955px 870px; 
+  }
+  @media (max-width: 1260px) {
+    .hero-bg {
+      min-height: 600px;
+      background-position: -50px bottom; 
+      background-size: 1500px 668px; 
+    }
+  }
+  @media (max-width: 1175px) {
+    .hero-bg {
+      background-position: -150px bottom; 
+    }
+  }
+  @media (max-width: 1090px) {
+    .hero-bg {
+      background-position: -150px bottom; 
+    }
   }
 }
