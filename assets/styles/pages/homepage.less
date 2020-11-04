@@ -10,6 +10,13 @@
     background-position: center bottom; 
     background-size: 1971px 1087px; 
   }
+  .page-heading {
+    font-size: 48px;
+  }
+  .os-logo {
+    width: 60px; 
+    height: 56px;
+  }
   .feature-card {
     margin-left: 5px;
     margin-right: 5px;
@@ -18,7 +25,6 @@
     font-family: @header-font;
   }
 
-  // A lot of media queries for making the hero image positioned nicely
   @media (max-width: 1440px) {
     .hero-bg {
       background-position: -160px bottom; 
@@ -53,6 +59,21 @@
         margin-left: auto;
         margin-right: auto;
       }
+    }
+  }
+  @media (max-width: 500px) {
+    .page-heading {
+      font-size: 40px;
+    }
+    .os-logo {
+      width: 43px; 
+      height: 40px;
+    }
+  }
+  @media (max-width: 360px) {
+    .os-logo {
+      width: 32px; 
+      height: 30px;
     }
   }
 }
