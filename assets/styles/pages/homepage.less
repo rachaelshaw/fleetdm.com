@@ -10,6 +10,11 @@
     background-position: center bottom; 
     background-size: 1971px 1087px; 
   }
+  .feature-card {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
   // A lot of media queries for making the hero image positioned nicely
   @media (max-width: 1440px) {
     .hero-bg {
@@ -36,6 +41,15 @@
   @media (max-width: 1090px) {
     .hero-bg {
       background-position: -150px bottom; 
+    }
+  }
+  @media (max-width: 960px) {
+    .feature-card-deck {
+      flex-direction: column;
+      .feature-card {
+        margin-left: auto;
+        margin-right: auto;
+      }
     }
   }
 }
