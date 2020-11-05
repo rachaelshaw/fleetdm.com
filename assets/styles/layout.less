@@ -23,6 +23,7 @@ html, body {
   position: absolute;
   left: 0px;
   bottom: 0px;
+  padding-top: 63px;
   .twitter-link {
     background-color: #03a9f4;
     border-color: #03a9f4;
@@ -50,25 +51,21 @@ body.detected-mobile {
   // …
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1199px) {
   [purpose='page-wrap'] {
-    padding-bottom: 75px;
+    padding-bottom: 230px;
     [purpose='page-footer'] {
-      height: 75px;
-      // [purpose='footer-copy'], [purpose='footer-nav'] {
-      //   width: 100%;
-      //   display: block;
-      //   text-align: center;
-      // }
+      height: 230px;
     }
   }
 }
 
-@media (max-width: 575px) {
+@media (max-width: 767px) {
   [purpose='page-wrap'] {
-    padding-bottom: 100px;
+    padding-bottom: 360px;
     [purpose='page-footer'] {
-      height: 100px;
+      padding-top: 44px;
+      height: 360px;
     }
   }
 }
