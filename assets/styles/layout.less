@@ -1,4 +1,4 @@
-@footer-height: 40px;
+@footer-height: 222px;
 @container-md-max-width: 1100px;
 
 [v-cloak] { display: none; }
@@ -23,6 +23,22 @@ html, body {
   position: absolute;
   left: 0px;
   bottom: 0px;
+  .twitter-link {
+    background-color: #03a9f4;
+    border-color: #03a9f4;
+    &:hover {
+      background-color: darken(#03a9f4, 10%);
+      border-color: darken(#03a9f4, 10%);
+    }
+  }
+  .slack-link {
+    background-color: #fff;
+    border-color: #fff;
+    &:hover {
+      background-color: darken(#fff, 10%);
+      border-color: darken(#fff, 10%);
+    }
+  }
 }
 
 body.detected-mobile {
@@ -39,11 +55,11 @@ body.detected-mobile {
     padding-bottom: 75px;
     [purpose='page-footer'] {
       height: 75px;
-      [purpose='footer-copy'], [purpose='footer-nav'] {
-        width: 100%;
-        display: block;
-        text-align: center;
-      }
+      // [purpose='footer-copy'], [purpose='footer-nav'] {
+      //   width: 100%;
+      //   display: block;
+      //   text-align: center;
+      // }
     }
   }
 }

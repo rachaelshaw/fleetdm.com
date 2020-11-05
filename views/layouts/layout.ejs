@@ -15,7 +15,7 @@
     rule. (Include them up here along with any hard-coded «link» tags for Typekit,
     Google Fonts, etc. - above the «body» to prevent the page flickering when fonts
     load.) */ %>
-    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,700;1,400&family=Raleway:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Mulish:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:wght@800&display=swap" rel="stylesheet">
 
     <% /* Certain scripts, normally analytics tools like Google Tag Manager and
     Google Analytics, should only be included in production: */
@@ -49,16 +49,40 @@
 
       <%- body %>
 
-      <footer class="navbar navbar-light justify-content-between flex-row-reverse px-5" purpose="page-footer">
-        <div class="nav" purpose="footer-nav">
-          <!-- <small class="nav-item d-inline-block"><a class="nav-link text-info px-1 px-sm-3" href="/contact">Contact<span class="d-none d-sm-inline"> us</span></a></small> -->
-          <small class="nav-item d-inline-block"><a class="nav-link text-dark px-1 px-sm-3" href="/legal/terms">Terms<span class="d-none d-sm-inline"> of use</span></a></small>
-          <small class="nav-item d-inline-block"><a class="nav-link text-dark px-1 px-sm-3" href="/legal/privacy">Privacy<span class="d-none d-sm-inline"> policy</span></a></small>
-          <% if(me) { %>
-          <small class="nav-item d-inline-block"><a class="nav-link text-info px-1 px-sm-3" href="/logout">Sign out</a></small>
-          <% } %>
+      <footer style="background-color :#1F1D42; color: #fff; padding-top: 63px;" class="px-4 px-sm-5" purpose="page-footer">
+        <div style="max-width: 1260px" class="container-fluid px-4 px-sm-5 mx-auto">
+          <div class="row mb-5">
+            <div class="col-sm">
+              <img alt="Fleet logo" src="/images/logo-120x48@2x.png" style="height: 48px; width: 120px;"/>
+            </div>
+            <div class="col-sm text-right">
+              <a href="#TODO" style="color: #fff;" class="twitter-link btn btn-sm">
+                <span style="padding-left: 42px;" class="d-inline-block position-relative">
+                  <img alt="Twitter logo" src="/images/logo-twitter-32x26@2x.png" style="height: 26px; width: 32px; left: 0; top: 0;" class="position-absolute"/>
+                  Follow us on Twitter
+                </span>
+              </a>
+              <a href="#TODO" style="color: #201E43" class="slack-link btn btn-sm">
+                <span style="padding-left: 38px;" class="d-inline-block position-relative">
+                  <img alt="Slack logo" src="/images/logo-slack-28x28@2x.png" style="height: 28px; width: 28px; left: 0; top: 0;" class="position-absolute"/>
+                  Join the community on Slack
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="row" style="font-family: 'Lato', sans-serif; font-size: 13px;">
+            <div class="col-lg-3 text-center text-md-left">
+              &copy; 2020 Fleet Device Management.
+            </div>
+            <div class="col-lg-6 text-center">
+              All trademarks, service marks, and company names are the property of their respective owners.
+            </div>
+            <div class="col-lg-3 text-center text-md-right">
+              <a href="#TODO" style="color: #fff;" class="underline">Documentation</a>
+              <a href="#TODO" style="color: #fff;" class="underline">Contribute</a>
+            </div>
+          </div>
         </div>
-        <small purpose="footer-copy">Copyright &copy; <%= sails.config.custom.platformCopyrightYear %> Fleet Device Management Inc. <br class="d-block d-sm-none"/>All rights reserved.</small>
       </footer>
     </div>
 
