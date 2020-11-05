@@ -15,23 +15,24 @@ module.exports.routes = {
   //  ╚╩╝╚═╝╚═╝╩  ╩ ╩╚═╝╚═╝╚═╝
   'GET /':                   { action: 'view-homepage-or-redirect' },
 
-  '/company/blog':           'https://medium.com/fleetdm',
-  '/company/about':          '/company/blog', // FUTURE: brief "about" page explaining the origins of the company
-  '/company/stewardship':    'https://github.com/fleetdm/fleet', // FUTURE: page about how we approach open source and our commitments to the community
+  '/blog':           'https://medium.com/fleetdm',
 
+  '/pricing':        (req, res)=>{
+    // FUTURE: pricing page explaining commercial support and EE, w/ our subscription terms
+    res.redirect('mailto:todo@example.com?subject=Pricing question&body=Please do not send this email!\n\nWe are a very young company and still working on our processes.  For now, if you have a pricing question or would like to know Fleet\'s latest pricing and support tiers, please create an issue at https://github.com/fleetdm/fleet/issues.  Thank you!');
+  },
+
+  '/security':       (req, res)=>{
+    // FUTURE: make a page- check out how Sails does it, and also https://about.gitlab.com/security/
+    res.redirect('mailto:todo@example.com?subject=Security vulnerability&body=Please do not send this email!\n\nWe are a very young company and still working on our processes.  For now, if you have a security vulnerability to report, please send a DM to mikermcneil or Zach Wasserman in the "osquery" Slack workspace.  Thank you for letting us know!');
+  },
+  
+  '/company/about':          '/blog', // FUTURE: brief "about" page explaining the origins of the company
+  '/company/stewardship':    'https://github.com/fleetdm/fleet', // FUTURE: page about how we approach open source and our commitments to the community
   '/company/contact':        (req, res)=>{
     // FUTURE: Page about this.  See “Contacting Fleet” in google drive for verbiage (updated holiday hours) - better to just make it all open source and check it in here.  For inspiration, see also: https://about.gitlab.com/company/contact/
     res.redirect('mailto:todo@example.com?subject=I have a question&body=Please do not send this email!\n\nWe are a very young company and still working on our processes.  For now, if you have questions or feedback for us, please create an issue at https://github.com/fleetdm/fleet/issues.  Thank you!');
   },
-  '/company/pricing':        (req, res)=>{
-    // FUTURE: pricing page explaining commercial support and EE, w/ our subscription terms
-    res.redirect('mailto:todo@example.com?subject=Pricing question&body=Please do not send this email!\n\nWe are a very young company and still working on our processes.  For now, if you have a pricing question or would like to know Fleet\'s latest pricing and support tiers, please create an issue at https://github.com/fleetdm/fleet/issues.  Thank you!');
-  },
-  '/company/security':       (req, res)=>{
-    // FUTURE: make a page- check out how Sails does it, and also https://about.gitlab.com/security/
-    res.redirect('mailto:todo@example.com?subject=Security vulnerability&body=Please do not send this email!\n\nWe are a very young company and still working on our processes.  For now, if you have a security vulnerability to report, please send a DM to mikermcneil or Zach Wasserman in the "osquery" Slack workspace.  Thank you for letting us know!');
-  },
-
 
   // 'GET /welcome/:unused?':   { action: 'dashboard/view-welcome' },
 
@@ -58,12 +59,9 @@ module.exports.routes = {
   //  ╩ ╩╩╚═╝╚═╝  ╩╚═╚═╝═╩╝╩╩╚═╚═╝╚═╝ ╩ ╚═╝  └┘   ═╩╝╚═╝╚╩╝╝╚╝╩═╝╚═╝╩ ╩═╩╝╚═╝
   // '/terms':                   '/legal/terms',
   // '/logout':                  '/api/v1/account/logout',
-  '/blog':     '/company/blog',
-  '/security': '/company/security',
-  '/support':  '/company/contact',
-  '/contact':  '/company/contact',
-  '/pricing':  '/company/pricing',
-  '/company':  '/company/about',
+  '/company':                    '/company/about',
+  '/support':                    '/company/contact',
+  '/contact':                    '/company/contact',
 
 
   //  ╦ ╦╔═╗╔╗ ╦ ╦╔═╗╔═╗╦╔═╔═╗
